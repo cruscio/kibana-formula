@@ -14,5 +14,8 @@ kibana-config:
     - group: root
     - dataset: {{ kibana.config }}
     - formatter: "YAML"
+    - kwargs: { 
+        preserve_quotes: True
+      }
     - require:
       - sls: kibana.install
